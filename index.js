@@ -37,7 +37,7 @@ app.get("/api/whoami", (req, res) => {
   // console.log(software);
 
   res.json({
-    ipadress: IP,
+    ipaddress: IP,
     language: preferedLenguage,
     software: software
   });
