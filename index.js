@@ -33,9 +33,13 @@ app.get("/api/whoami", (req, res) => {
   const preferedLenguage = req.headers['accept-language'];
   // console.log(preferedLenguage);
 
+  const software = req.headers['user-agent'];
+  // console.log(software);
+
   res.json({
     ipadress: IP,
-    language: preferedLenguage
+    language: preferedLenguage,
+    software: software
   });
 });
 
