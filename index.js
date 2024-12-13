@@ -28,9 +28,14 @@ app.get("/api/whoami", (req, res) => {
   //I store the IP adress for formating the JSON later
   const IP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
   // console.log(IP); 
-  
+
+  //Get prefered lengage from Header
+  const preferedLenguage = req.headers['accept-language'];
+  // console.log(preferedLenguage);
+
   res.json({
-    ipadress: IP
+    ipadress: IP,
+    language: preferedLenguage
   });
 });
 
